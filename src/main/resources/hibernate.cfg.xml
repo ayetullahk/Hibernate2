@@ -1,0 +1,27 @@
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/courses_dp</property>
+        <property name="hibernate.connection.username">dev_user</property>
+        <property name="hibernate.connection.password">123456</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <property name="show_sql">true</property>
+
+        <property name="format_sql">true</property>
+
+        <property name="hbm2ddl.auto">update</property>
+
+         <!--addAnnotatedClass(Student05.class).addAnnotatedClass(Diary02.class); yerine
+         aşağıdaki config yapılabilir-->
+        <mapping class="com.tpe.domain.Question"/>
+        <mapping class="com.tpe.domain.QuestionDetail"/>
+        <mapping class="com.tpe.domain.Answer"/>
+
+
+
+    </session-factory>
+</hibernate-configuration>
